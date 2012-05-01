@@ -71,9 +71,12 @@ body {
 #page {
 	margin: 2em auto;
 	max-width: 1000px;
+	border: 1px solid #cccdce;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
 }
 #branding hgroup {
-	margin: 0 7.6%;
+/* 	margin: 0 7.6%; */
 }
 #access div {
 	margin: 0 7.6%;
@@ -498,7 +501,6 @@ a:hover {
 ----------------------------------------------- */
 
 #branding {
-	border-top: 2px solid #bbb;
 	padding-bottom: 10px;
 	position: relative;
 	z-index: 9999;
@@ -530,6 +532,10 @@ a:hover {
 	width: 100%;
 }
 
+#branding img.logo {
+	width: 200px;
+	margin: 20px;
+}
 
 /* =Menu
 -------------------------------------------------------------- */
@@ -2193,6 +2199,10 @@ p.comment-form-comment {
 
 #colophon {
 	clear: both;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
 }
 #supplementary {
 	border-top: 1px solid #ddd;
@@ -2222,7 +2232,7 @@ p.comment-form-comment {
 
 /* Site Generator Line */
 #site-generator {
-	background: #f9f9f9;
+/* 	background: #f9f9f9; */
 	border-top: 1px solid #ddd;
 	color: #666;
 	font-size: 12px;
