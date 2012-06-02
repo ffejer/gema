@@ -76,7 +76,7 @@ body {
 	-moz-border-radius: 10px;
 }
 #branding hgroup {
-/* 	margin: 0 7.6%; */
+	margin: 0 10px;
 }
 #access div {
 	margin: 0 7.6%;
@@ -507,7 +507,6 @@ a:hover {
 }
 #site-title {
 	margin-right: 270px;
-	padding: 3.65625em 0 0;
 }
 #site-title a {
 	color: #111;

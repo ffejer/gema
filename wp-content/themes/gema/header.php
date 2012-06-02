@@ -36,9 +36,9 @@
 	bloginfo( 'name' );
 
 	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
+	/* $site_description = get_bloginfo( 'description', 'display' );
 	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
+		echo " | $site_description"; */
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
@@ -71,8 +71,11 @@
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<hgroup>
-				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<div id="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<img class="logo" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/logo.png" />
+					</a>
+				</div>
 			</hgroup>
 
 			<?php
