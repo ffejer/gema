@@ -2683,3 +2683,24 @@ p.comment-form-comment {
 #ie7 section.recent-posts {
 	margin-right: 7.6%;
 }
+
+/* main page article rules */
+.main-post-title {
+	font-weight: bold;
+	font-variant: small-caps;
+	font-size: 17pt;
+}
+
+.main-post-outside {
+	position: relative;
+}
+
+.main-post-outside img {
+	position: absolute;
+	right: 0;
+	left: 0;
+}
+
+.main-post-content {
+    margin-left: 165px;
+}

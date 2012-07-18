@@ -27,8 +27,16 @@ function taxonomy_author_init() {
 	);
 }
 
-add_action( 'init', 'taxonomy_issue_init' );
-add_action( 'init', 'taxonomy_author_init' );
+function gema_init()
+{
+	taxonomy_issue_init();
+	taxonomy_author_init();
+	
+	/* enabling translation */
+	load_theme_textdomain( 'twentyeleven', get_template_directory() . '/languages' );
+	
+	add_theme_support('post-thumbnails');
+}
 
 /**
  * Function used to calculate the Issue(s) the post belongs to.
@@ -55,3 +63,5 @@ function gema_post_belongs_to_issue($id)
 	
 	return _e('Issue ', 'gema') . implode(", ", $links);
 }
+
+add_action('init', 'gema_init');

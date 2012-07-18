@@ -23,9 +23,13 @@ get_header(); ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php get_template_part( 'content', get_post_format() ); ?>
-
+					<div class="main-post-outside clearfix">
+						<?php the_post_thumbnail('thumbnail'); ?>
+						<div class="main-post-content">
+							<p class="main-post-title"><?php the_title();Ê?></p>
+							<?php the_excerpt(); ?>
+						</div>
+					</div>
 				<?php endwhile; ?>
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
