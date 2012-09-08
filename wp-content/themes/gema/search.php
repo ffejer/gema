@@ -1,6 +1,6 @@
 <?php
 /**
- * The template used to display Tag Archive pages
+ * The template for displaying Search Results pages.
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
@@ -15,28 +15,22 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php
-						printf( __( 'Tag Archives: %s', 'twentyeleven' ), '<span>' . single_tag_title( '', false ) . '</span>' );
-					?></h1>
-
-					<?php
-						$tag_description = tag_description();
-						if ( ! empty( $tag_description ) )
-							echo apply_filters( 'tag_archive_meta', '<div class="tag-archive-meta">' . $tag_description . '</div>' );
-					?>
+					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyeleven' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header>
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="main-post-outside clearfix">
-						<?php the_post_thumbnail('thumbnail'); ?>
-						<div class="main-post-content">
-							<a href="<?php the_permalink();Ê?>" class="main-post-title"><?php the_title();Ê?></a>
-							<?php the_excerpt(); ?>
-						</div>
-					</div>
+
+					<?php
+						/* Include the Post-Format-specific template for the content.
+						 * If you want to overload this in a child theme then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'content', get_post_format() );
+					?>
+
 				<?php endwhile; ?>
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
@@ -49,7 +43,7 @@ get_header(); ?>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyeleven' ); ?></p>
+						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentyeleven' ); ?></p>
 						<?php get_search_form(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->
@@ -59,5 +53,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</section><!-- #primary -->
 
-<?php // get_sidebar(); ?>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
