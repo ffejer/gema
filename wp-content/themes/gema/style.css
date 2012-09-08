@@ -2685,7 +2685,7 @@ p.comment-form-comment {
 }
 
 /* main page article rules */
-.main-post-title {
+.main-post-title, .section-anchor {
 	font-weight: bold;
 	font-variant: small-caps;
 	font-size: 17pt;

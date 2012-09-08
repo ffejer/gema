@@ -14,13 +14,18 @@
 
 get_header(); ?>
 
-		<div id="primary">
+<?php
+	$sections = get_categories(array('hide_empty' => 0, 'parent' => 25));
+	$home = home_url();
+?>
+
+		<div id="primary" class="sections-page">
 			<div id="content" role="main">
-				<ul>
-					<?php foreach(get_categories(array('hide_empty' => 0)) as $category): ?>
-						<li><?php printf("%s (%d)", $category->name, $category->count);?></li>
+				<ul style="list-style: none;">
+					<?php foreach($sections as $category): ?>
+						<li><a href="<?php echo($home . "/Rubrik/" . $category->slug); ?>" class="section-anchor"><?php echo($category->name);?></a> (<?php echo($category->count) ?>)</li>
 					<?php endforeach; ?>
-				</ul>
+				</ul>			
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
