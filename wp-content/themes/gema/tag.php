@@ -30,13 +30,7 @@ get_header(); ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="main-post-outside clearfix">
-						<?php the_post_thumbnail('thumbnail'); ?>
-						<div class="main-post-content">
-							<a href="<?php the_permalink();Ê?>" class="main-post-title"><?php the_title();Ê?></a>
-							<?php the_excerpt(); ?>
-						</div>
-					</div>
+					<?php get_template_part( 'content', 'excerpt' ); ?>
 				<?php endwhile; ?>
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
