@@ -1,35 +1,44 @@
 <?php
 /**
- * The main template file.
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * The template used to display Tag Archive pages
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
+ * @since Twenty Eleven 1.0
  */
 
 get_header(); ?>
 
-		<div id="primary">
+		<section id="primary">
 			<div id="content" role="main">
 
 			<?php if ( have_posts() ) : ?>
+
+				<header class="page-header">
+					<h1 class="page-title"><?php
+						printf( __( 'Tag Archives: %s', 'twentyeleven' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+					?></h1>
+
+					<?php
+						$tag_description = tag_description();
+						if ( ! empty( $tag_description ) )
+							echo apply_filters( 'tag_archive_meta', '<div class="tag-archive-meta">' . $tag_description . '</div>' );
+					?>
+				</header>
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="main-post-outside clearfix">
-						<?php the_post_thumbnail('thumbnail'); ?>
-						<div class="main-post-content">
-							<a href="<?php the_permalink();Ê?>" class="main-post-title"><?php the_title();Ê?></a>
-							<?php the_excerpt(); ?>
-						</div>
-					</div>
+
+					<?php
+						/* Include the Post-Format-specific template for the content.
+						 * If you want to overload this in a child theme then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'content', get_post_format() );
+					?>
+
 				<?php endwhile; ?>
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
@@ -50,7 +59,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</div><!-- #content -->
-		</div><!-- #primary -->
+		</section><!-- #primary -->
 
 <?php // get_sidebar(); ?>
 <?php get_footer(); ?>
