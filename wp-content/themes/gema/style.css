@@ -2685,7 +2685,7 @@ p.comment-form-comment {
 }
 
 /* main page article rules */
-.main-post-title, .section-anchor {
+.main-post-title {
 	font-weight: bold;
 	font-variant: small-caps;
 	font-size: 17pt;
@@ -2704,4 +2704,139 @@ p.comment-form-comment {
 
 .main-post-content {
     margin-left: 165px;
+}
+
+.zeitung-logo {
+	height: 100px;
+	width: 100px;
+	background-image: url(images/zeitung.png);
+	float: left;
+	margin: 10px;
+}
+
+.zeitung-logo span {
+	color: white;
+	font-size: 16pt;
+	float: right;
+}
+
+.zeitung-logo-color-0 {
+	background-color: rgb(239, 65, 54);
+}
+
+.zeitung-logo-color-1 {
+	background-color: rgb(128, 130, 133);
+}
+
+.zeitung-logo-color-2 {
+	background-color: rgb(203, 107, 79);
+}
+
+.zeitung-logo-color-3 {
+	background-color: rgb(96, 113, 141);
+}
+
+.zeitung-logo-color-4 {
+	background-color: rgb(144, 65, 57);
+}
+
+.zeitung-logo-color-5 {
+	background-color: rgb(103, 128, 55);
+}
+
+.zeitung-logo-color-6 {
+	background-color: rgb(0, 105, 181);
+}
+
+.zeitung-logo-color-7 {
+	background-color: rgb(145, 39, 143);
+}
+
+.zeitung-logo-color-8 {
+	background-color: rgb(213, 147, 138);
+}
+
+.zeitung-logo-color-9 {
+	background-color: rgb(159, 216, 210);
+}
+
+.zeitung-logo-color-10 {
+	background-color: rgb(186, 157, 202);
+}
+
+.zeitung-logo-color-11 {
+	background-color: rgb(99, 17, 4);
+}
+
+.zeitung-logo-color-12 {
+	background-color: rgb(241, 125, 177);
+}
+
+#content.custom-page-content {
+	margin: 0 34% 0 7.6%;
+	width: 58.4%;		
+}
+
+.rubrik-container {
+	width: 100px;
+	float: left;
+	margin: 15px;
+}
+
+.rubrik-container p {
+	width: 100%;
+	text-align: center;
+}
+
+.rubrik-logo {
+	width: 100px;
+	height: 100px;
+}
+
+.rubrik-logo-editorial {
+	background-image: url(images/rubriken/editorial.png)
+}
+
+.rubrik-logo-eu {
+	background-image: url(images/rubriken/eu.png)
+}
+
+.rubrik-logo-freizeit {
+	background-image: url(images/rubriken/freizeit.png)
+}
+
+.rubrik-logo-germanistik {
+	background-image: url(images/rubriken/germanistik.png)
+}
+
+.rubrik-logo-geschichte {
+	background-image: url(images/rubriken/geschichte.png)
+}
+
+.rubrik-logo-gesellschaft {
+	background-image: url(images/rubriken/gesellschaft.png)
+}
+
+.rubrik-logo-interviews {
+	background-image: url(images/rubriken/interviews.png)
+}
+
+.rubrik-logo-kultur {
+	background-image: url(images/rubriken/kultur.png)
+}
+
+.rubrik-logo-lesermeinungen {
+	background-image: url(images/rubriken/lesermeinungen.png)
+}
+
+.rubrik-logo-nachrichten {
+	background-image: url(images/rubriken/nachrichten.png)
+}
+
+.rubrik-logo-studiosi {
+	background-image: url(images/rubriken/studiosi.png)
+}
+
+.rubrik-logo-studium {
+	background-image: url(images/rubriken/studium.png)
 }

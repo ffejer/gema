@@ -15,17 +15,21 @@
 get_header(); ?>
 
 <?php
-	$sections = get_categories(array('hide_empty' => 0, 'parent' => 25));
+	$sections = get_categories(array('hide_empty' => 0, 'parent' => 24));
 	$home = home_url();
 ?>
 
 		<div id="primary" class="sections-page">
-			<div id="content" role="main">
-				<ul style="list-style: none;">
+			<div id="content" role="main" class="custom-page-content">
 					<?php foreach($sections as $category): ?>
-						<li><a href="<?php echo($home . "/Rubrik/" . $category->slug); ?>" class="section-anchor"><?php echo($category->name);?></a> (<?php echo($category->count) ?>)</li>
+						<a href="<?php echo($home . "/rubrik/" . $category->slug); ?>">
+							<div class="rubrik-container">
+								<div class="rubrik-logo rubrik-logo-<?php echo($category->slug); ?>"></div>
+								<div><p><?php echo($category->name);?></p></div>
+							</div>
+							
+						</a>
 					<?php endforeach; ?>
-				</ul>			
 			</div><!-- #content -->
 		</div><!-- #primary -->
 

@@ -2,12 +2,11 @@
 function taxonomy_issue_init() {
 	register_taxonomy(
 		'issue',
-		'post',
+		array('post', 'newspaper'),
 		array(
-			'label' => __( 'Issue' ),
+			'label' => 'Zeitung',
 			'sort' => true,
 			'args' => array( 'orderby' => 'term_order' ),
-			'rewrite' => array( 'slug' => 'heft' ),
 			'hierarchical' => false,
 		)
 	);
@@ -27,10 +26,34 @@ function taxonomy_author_init() {
 	);
 }
 
+function post_newspaper_init() {
+	$labels = array(
+	    'name' => 'Zeitungen',
+	    'singular_name' => 'Zeitung'	
+	);
+	  $args = array(
+	    'labels' => $labels,
+	    'public' => true,
+	    'publicly_queryable' => true,
+	    'show_ui' => true, 
+	    'show_in_menu' => true, 
+	    'query_var' => true,
+		'rewrite' => array( 'slug' => 'zeitung' ),
+	  	'capability_type' => 'post',
+	    'has_archive' => true, 
+	    'hierarchical' => false,
+	    'menu_position' => null,
+	    'supports' => array( 'title', 'editor', 'author', 'thumbnail' )
+	  ); 
+	  register_post_type('newspaper',$args);
+}
+
 function gema_init()
 {
 	taxonomy_issue_init();
 	taxonomy_author_init();
+	
+	post_newspaper_init();
 	
 	/* enabling translation */
 	load_theme_textdomain( 'twentyeleven', get_template_directory() . '/languages' );
