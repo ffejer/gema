@@ -4,7 +4,7 @@ Theme URI:      http://www.gema.hu
 Description:    Theme for the coolest magazin around the world!
 Author:         Ferenc FEJE'R
 Template:       twentyeleven
-Version:        0.1.0
+Version:        0.9.0
 */
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
@@ -2704,6 +2704,7 @@ p.comment-form-comment {
 
 .main-post-content {
     margin-left: 165px;
+    min-height: 150px;
 }
 
 .zeitung-logo {
