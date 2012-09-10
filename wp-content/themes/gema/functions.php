@@ -58,9 +58,20 @@ function gema_init()
 	/* enabling translation */
 	load_theme_textdomain( 'twentyeleven', get_template_directory() . '/languages' );
 	
+	modify_slugs();
+	
 	add_theme_support('post-thumbnails');
 }
 
+function modify_slugs() {
+	global $wp_rewrite;
+    $wp_rewrite->author_base        = 'autor';
+    $wp_rewrite->search_base        = 'suchen';
+    $wp_rewrite->comments_base      = 'kommentare';
+    $wp_rewrite->pagination_base    = 'seite';
+    $wp_rewrite->flush_rules();
+	
+}
 /**
  * Function used to calculate the Issue(s) the post belongs to.
  * 
