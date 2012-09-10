@@ -11,7 +11,8 @@ Thumbs.db
 .buildpath
 .project
 
-index.php
+/index.php
+/.settings/*
 .htaccess
 wp-*.php
 xmlrpc.php
