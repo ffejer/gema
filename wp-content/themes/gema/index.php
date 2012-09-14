@@ -14,9 +14,115 @@
 
 get_header(); ?>
 
+			<?php 
+				// elastic slider
+				$elasticEnabled = TRUE;
+			?>
+			<div class="wrapper">
+                <div id="ei-slider" class="ei-slider">
+                    <ul class="ei-slider-large">
+                        <li>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/1.jpg" alt="image01" />
+                            <div class="ei-title">
+                                <h2>Lehrveranstaltungen</h2>
+                                <h3>der Dozenten des Instituts</h3>
+                            </div>
+                            <!-- div class="ei-gema-promo">
+                            	<p>Péter Bassola (ehem. Lehrstuhlleiter) (2004)</p>
+								<p>Árpád Bernáth (ehem. Institutsleiter) (2003)</p>
+								<p>Csilla Bernáth (2004)</p>
+								<p>Károly Csúri (Lehrstuhlleiter) (2005)</p>
+								<p>Miklós Fenyves (2006)</p>
+								<p>Erzsébet Forgács (2005)</p>
+								<p>Endre Hárs (2004)</p>
+								<p>Géza Horváth (Institutsleiter) (2005)</p>
+								<p>Márta Horváth (2004)</p>
+								<p>Tamás Kispál (2008)</p>
+								<p>Katalin Petneki (2004)</p>
+								<p>Marion Rutzendorfer (2008)</p>
+								<p>György Scheibl (2005)</p>
+								<p>Erzsébet Szabó (2006)</p>
+								<p>Ellen Tichy (2005)</p>
+								<p>Marco Winkler (2005)</p>
+                            </div-->
+                        </li>
+                        <li>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/2.jpg" alt="image02" />
+                            <div class="ei-title">
+                                <h2>Germanistikstudium</h2>
+                                <h3>in Szeged</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/3.jpg" alt="image03"/>
+                            <div class="ei-title">
+                                <h2>Interviews</h2>
+                                <h3>mit Gastdozenten des Instituts</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/4.jpg" alt="image04"/>
+                            <div class="ei-title">
+                                <h2>Germanistenparty</h2>
+                                <h3>&nbsp;</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/5.jpg" alt="image05"/>
+                            <div class="ei-title">
+                                <h2>Medien</h2>
+                                <h3>Internet, Presse, Fernsehen, Rundfunk</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/6.jpg" alt="image06"/>
+                            <div class="ei-title">
+                                <h2>Musik</h2>
+                                <h3>&nbsp;</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/7.jpg" alt="image07"/>
+                            <div class="ei-title">
+                                <h2>Unterrichtspraktikum</h2>
+                                <h3>&nbsp;</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/7.jpg" alt="image07"/>
+                            <div class="ei-title">
+                                <h2>Studentenwohnheime</h2>
+								<h3>in Szeged</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/7.jpg" alt="image07"/>
+                            <div class="ei-title">
+                                <h2>Interviews</h2>
+								<h3>mit Dozenten des Instituts</h3>
+                            </div>
+                        </li>
+                    </ul><!-- ei-slider-large -->
+                    <ul class="ei-slider-thumbs">
+                        <li class="ei-slider-element">Current</li>
+                        <li><a href="#">Slide 1</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/1.jpg" alt="thumb01" /></li>
+                        <li><a href="#">Slide 2</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/2.jpg" alt="thumb02" /></li>
+                        <li><a href="#">Slide 3</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/3.jpg" alt="thumb03" /></li>
+                        <li><a href="#">Slide 4</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/4.jpg" alt="thumb04" /></li>
+                        <li><a href="#">Slide 5</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/5.jpg" alt="thumb05" /></li>
+                        <li><a href="#">Slide 6</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/6.jpg" alt="thumb06" /></li>
+                        <li><a href="#">Slide 7</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/7.jpg" alt="thumb07" /></li>
+                        <li><a href="#">Slide 8</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/7.jpg" alt="thumb07" /></li>
+                        <li><a href="#">Slide 9</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/7.jpg" alt="thumb07" /></li>
+                    </ul><!-- ei-slider-thumbs -->
+                </div><!-- ei-slider -->
+            </div><!-- wrapper -->			
+			
+			<?php // elastic slider ?>
 		<div id="primary">
 			<div id="content" role="main">
-
+			
+			
 			<?php if ( have_posts() ) : ?>
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>

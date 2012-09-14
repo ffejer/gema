@@ -31,4 +31,20 @@
 <?php wp_footer(); ?>
 
 </body>
+
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.8.1.min.js" type="text/javascript"></script>
+<?php global $elasticEnabled;Ê?>
+<?php if($elasticEnabled): ?>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.eislideshow.js" type="text/javascript"></script>
+<script type="text/javascript">
+            $(function() {
+                $('#ei-slider').eislideshow({
+					easing		: 'easeOutExpo',
+					titleeasing	: 'easeOutExpo',
+					titlespeed	: 1200
+                });
+            });
+</script>
+<?php endif; ?>
 </html>
