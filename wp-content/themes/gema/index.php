@@ -22,7 +22,7 @@ get_header(); ?>
                 <div id="ei-slider" class="ei-slider">
                     <ul class="ei-slider-large">
                         <li>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/1.jpg" alt="image01" />
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/lehrever.jpg" alt="image01" />
                             <div class="ei-title">
                                 <h2>Lehrveranstaltungen</h2>
                                 <h3>der Dozenten des Instituts</h3>
@@ -47,56 +47,56 @@ get_header(); ?>
                             </div-->
                         </li>
                         <li>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/2.jpg" alt="image02" />
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/germanistikstudium.jpg" alt="image02" />
                             <div class="ei-title">
                                 <h2>Germanistikstudium</h2>
                                 <h3>in Szeged</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/3.jpg" alt="image03"/>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/interviews-mit-gastdoz.jpg" alt="image03"/>
                             <div class="ei-title">
                                 <h2>Interviews</h2>
                                 <h3>mit Gastdozenten des Instituts</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/4.jpg" alt="image04"/>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/germanisten-party.jpg" alt="image04"/>
                             <div class="ei-title">
                                 <h2>Germanistenparty</h2>
                                 <h3>&nbsp;</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/5.jpg" alt="image05"/>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/medien.jpg" alt="image05"/>
                             <div class="ei-title">
                                 <h2>Medien</h2>
                                 <h3>Internet, Presse, Fernsehen, Rundfunk</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/6.jpg" alt="image06"/>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/musik.jpg" alt="image06"/>
                             <div class="ei-title">
                                 <h2>Musik</h2>
                                 <h3>&nbsp;</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/7.jpg" alt="image07"/>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/praktikum.jpg" alt="image07"/>
                             <div class="ei-title">
                                 <h2>Unterrichtspraktikum</h2>
                                 <h3>&nbsp;</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/7.jpg" alt="image07"/>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/wohnheime.jpg" alt="image07"/>
                             <div class="ei-title">
                                 <h2>Studentenwohnheime</h2>
 								<h3>in Szeged</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/7.jpg" alt="image07"/>
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/large/interviews-mit-doz.jpg" alt="image07"/>
                             <div class="ei-title">
                                 <h2>Interviews</h2>
 								<h3>mit Dozenten des Instituts</h3>
@@ -105,15 +105,15 @@ get_header(); ?>
                     </ul><!-- ei-slider-large -->
                     <ul class="ei-slider-thumbs">
                         <li class="ei-slider-element">Current</li>
-                        <li><a href="#">Slide 1</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/1.jpg" alt="thumb01" /></li>
-                        <li><a href="#">Slide 2</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/2.jpg" alt="thumb02" /></li>
-                        <li><a href="#">Slide 3</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/3.jpg" alt="thumb03" /></li>
-                        <li><a href="#">Slide 4</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/4.jpg" alt="thumb04" /></li>
-                        <li><a href="#">Slide 5</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/5.jpg" alt="thumb05" /></li>
-                        <li><a href="#">Slide 6</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/6.jpg" alt="thumb06" /></li>
-                        <li><a href="#">Slide 7</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/7.jpg" alt="thumb07" /></li>
-                        <li><a href="#">Slide 8</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/7.jpg" alt="thumb07" /></li>
-                        <li><a href="#">Slide 9</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/7.jpg" alt="thumb07" /></li>
+                        <li><a>Lehrveranstaltungen der Dozenten des Instituts</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/lehrever.jpg" alt="" /></li>
+                        <li><a>Germanistikstudium in Szeged</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/germanistikstudium.jpg" alt="" /></li>
+                        <li><a>Interviews mit Gastdozenten des Instituts</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/interviews-mit-gastdoz.jpg" alt="" /></li>
+                        <li><a>Germanistenparty</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/germanisten-party.jpg" alt="" /></li>
+                        <li><a>Medien</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/medien.jpg" alt="" /></li>
+                        <li><a>Musik</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/musik.jpg" alt="" /></li>
+                        <li><a>Unterrichtspraktikum</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/praktikum.jpg" alt="" /></li>
+                        <li><a>Studentenwohnheime in Szeged</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/wohnheime.jpg" alt="" /></li>
+                        <li><a>Slide 9</a><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider/thumbs/interviews-mit-doz.jpg" alt="" /></li>
                     </ul><!-- ei-slider-thumbs -->
                 </div><!-- ei-slider -->
             </div><!-- wrapper -->			

@@ -551,7 +551,7 @@ a:hover {
 	clear: both;
 	display: block;
 	float: left;
-	margin: 0 auto 6px;
+	/* margin: 0 auto 6px; */
 	width: 100%;
 }
 #access ul {
@@ -2884,9 +2884,10 @@ p.comment-form-comment {
 }
 .ei-title{
 	position: absolute;
-	right: 50%;
+	right: 51%;
 	margin-right: 13%;
-	top: 30%;
+	top: 25%;
+	max-width: 300px;
 }
 .ei-title h2, .ei-title h3{
 	text-align: right;
@@ -2896,7 +2897,7 @@ p.comment-form-comment {
 	line-height: 50px;
 	font-family: 'Playfair Display', serif;
 	font-style: italic;
-	color: #b5b5b5;
+	color: #CB6B4F;
 }
 .ei-title h3{
 	font-size: 25px;
