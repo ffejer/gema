@@ -108,7 +108,7 @@ get_header(); ?>
 			
 			<?php // elastic slider ?>
 		
-			<!-- div id="content" role="main" class="custom-page-content">
+			<div id="content" role="main" class="custom-page-content">
 					<?php foreach($sections as $category): ?>
 						<a href="<?php echo($home . "/rubrik/" . $category->slug); ?>">
 							<div class="rubrik-container">
