@@ -2915,6 +2915,7 @@ p.comment-form-comment {
 	position: relative;
 	float: left;
 	height: 100%;
+	list-style: none;
 }
 .ei-slider-thumbs li.ei-slider-element{
 	top: 0px;
