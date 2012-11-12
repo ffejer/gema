@@ -21,8 +21,7 @@
 
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
-				<?php echo gema_post_belongs_to_issue($post->ID); ?>
-				<?php _e('Article ', 'gema');Ê?>
+				<?php twentyeleven_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 
