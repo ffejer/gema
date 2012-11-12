@@ -13,7 +13,7 @@
  */
 
 // elastic slider
-$elasticSliderEnabled = TRUE;
+$elasticSliderEnabled = FALSE;
 
 get_header(); ?>
 
@@ -23,7 +23,9 @@ get_header(); ?>
 ?>
 
 		<div id="primary" class="sections-page">
-		<?php // elastic slider ?>
+		<?php // elastic slider
+			if($elasticSliderEnabled) :
+		?>
 		<div class="ei-slider-wrapper">
                 <div id="ei-slider" class="ei-slider">
                     <ul class="ei-slider-large">
@@ -106,11 +108,13 @@ get_header(); ?>
                 </div><!-- ei-slider -->
             </div><!-- wrapper -->			
 			
-			<?php // elastic slider ?>
+			<?php
+				endif;
+			// elastic slider ?>
 		
 			<div id="content" role="main" class="custom-page-content">
 					<?php foreach($sections as $category): ?>
-						<a href="<?php echo($home . "/rubrik/" . $category->slug); ?>">
+						<a href="<?php echo($home . "/kategorie/rubriken/" . $category->slug); ?>">
 							<div class="rubrik-container">
 								<div class="rubrik-logo rubrik-logo-<?php echo($category->slug); ?>"></div>
 								<div><p><?php echo($category->name);?></p></div>

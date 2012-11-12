@@ -6,14 +6,13 @@
  * @since Twenty Eleven 1.0
  */
 
-$newspapers = new WP_Query('post_type=newspaper&posts_per_page=-1');
-
 get_header(); ?>
 
 		<div id="primary">
 			<div id="content" role="main" class="custom-page-content">
 
-			<?php if ( $newspapers->have_posts() ) : ?>
+			<?php $issues = get_categories(array('parent' => 62)); ?>
+			<?php if ( count($issues) > 0 ) : ?>
 
 				<?php
 					twentyeleven_content_nav( 'nav-above' );
@@ -21,14 +20,14 @@ get_header(); ?>
 				?>
 
 				<?php /* Start the Loop */ ?>
-				<?php while ( $newspapers->have_posts() ) : $newspapers->the_post(); ?>
+				<?php foreach ( $issues as $issue ) : ?>
 					<?php $colour = $count%13; ?>
-					<a href="<?php echo get_permalink(); ?>"><div class="zeitung-logo zeitung-logo-color-<?php echo($colour); ?>">
-						<span><?php the_title(); ?></span>
+					<a href="<?php echo(esc_url(get_category_link($issue->term_id))); ?>"><div class="zeitung-logo zeitung-logo-color-<?php echo($colour); ?>">
+						<span><?php echo($issue->name); ?></span>
 					</div>
 					</a>
 					<?php $count++;Ê?>
-				<?php endwhile; ?>
+				<?php endforeach; ?>
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
 

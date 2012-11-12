@@ -53,7 +53,8 @@
 <![endif]-->
 
 <?php // Google Analytics ?>
-<script type="text/javascript">
+<!-- Google Analytics off for local use DO NOT SUBMIT! -->
+<!-- script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-35392776-1']);
@@ -65,7 +66,7 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
+</script -->
 
 <?php
 	/* We add some JavaScript to pages with the comment form
@@ -115,10 +116,6 @@
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
-				<div class="menu">
-					<ul>
-					</ul>
-				</div>
 			</nav><!-- #access -->
 	</header><!-- #branding -->
 

@@ -1,4 +1,8 @@
 <?php
+
+define(GEMA_CATEGORY_ID_ISSUE, 62);
+define(GEMA_CATEGORY_ID_SECTION, 24);
+
 function taxonomy_issue_init() {
 	register_taxonomy(
 		'issue',
@@ -50,10 +54,10 @@ function post_newspaper_init() {
 
 function gema_init()
 {
-	taxonomy_issue_init();
-	taxonomy_author_init();
+	//taxonomy_issue_init();
+	//taxonomy_author_init();
 	
-	post_newspaper_init();
+	//post_newspaper_init();
 	
 	/* enabling translation */
 	load_theme_textdomain( 'twentyeleven', get_template_directory() . '/languages' );
@@ -69,6 +73,7 @@ function modify_slugs() {
     $wp_rewrite->search_base        = 'suchen';
     $wp_rewrite->comments_base      = 'kommentare';
     $wp_rewrite->pagination_base    = 'seite';
+    $wp_rewrite->category_base      = 'kategorie';
     $wp_rewrite->flush_rules();
 	
 }

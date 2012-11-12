@@ -11,6 +11,65 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
+		
+		<?php if(function_exists('social_ring_show')){ social_ring_show();} ?>
+		
+		<h2>
+			<?php
+				$i = new CoAuthorsIterator();
+				
+				if($i->count() > 0)
+				{					
+					print $i->count() == 1 ? 'Autor: ' : 'Autoren: ';
+					$author_utility_text = '<a href="%3$s">%1$s %2$s</a>';
+					
+					$i->iterate();
+					
+					printf($author_utility_text,
+						get_the_author_meta( 'first_name' ),
+						get_the_author_meta( 'last_name' ),
+						esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ));
+					
+					while($i->iterate()){
+						print $i->is_last() ? ' und ' : ', ';
+						printf($author_utility_text,
+							get_the_author_meta( 'first_name' ),
+							get_the_author_meta( 'last_name' ),
+							esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ));
+					}
+				}
+			?>
+		</h2>
+		<?php 
+			$issue = array();
+			$section = array();
+			
+			$categories = get_the_category();
+			
+			foreach ($categories as $category)
+			{
+				if($category->parent == GEMA_CATEGORY_ID_SECTION)
+				{
+					$section[] = sprintf('<a href="%2$s">%1$s</a>', $category->name, esc_url(get_category_link($category->term_id)));
+				}
+				else if($category->parent == GEMA_CATEGORY_ID_ISSUE)
+				{
+					$issue[] = sprintf('<a href="%2$s">%1$s</a>', $category->name, esc_url(get_category_link($category->term_id)));
+				}
+			}
+		?>
+		
+		<?php if(count($issue) > 0): ?>
+		<h2>
+			Zeitung: <?php echo(implode(', ', $issue)) ?>
+		</h2>
+		<?php endif; ?>
+		
+		<?php if(count($section) > 0): ?>
+		<h2>
+			<?php print count($section) == 1 ? 'Rubrik: ' : 'Rubriken: '; echo(implode(', ', $section)) ?>
+		</h2>
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
