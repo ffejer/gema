@@ -11,7 +11,7 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main" class="custom-page-content">
 
-			<?php $issues = get_categories(array('parent' => 62)); ?>
+			<?php $issues = get_categories(array('parent' => GEMA_CATEGORY_ID_ISSUE)); ?>
 			<?php if ( count($issues) > 0 ) : ?>
 
 				<?php
