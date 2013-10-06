@@ -30,26 +30,40 @@ get_header(); ?>
 				    ORDER by um2.meta_value ASC"
 				);
 				
-					$users = get_users( array('role' => 'author', 'fields' => 'all_with_meta') );
+					//$users = get_users( array('role' => 'author', 'fields' => 'all_with_meta') );
 					
-					foreach ($authors as $author) {
-						
-						$user_info = get_userdata($author);
-						  $first_name = $user_info->user_firstname;
-					      $last_name = $user_info->user_lastname;
-					    
-						echo "$first_name $last_name";
-					}
+					$user_manifest = array();
 					
-					$posts = get_posts();
-					
-					foreach ($posts as $post)
+					foreach ($authors as $author)
 					{
-						echo "<pre>";
-						print_r(get_coauthors($post->ID));
-						echo "</pre>";
+						$user_manifest[] = get_userdata($author);
 					}
 					
+					$posts_belonging_to_users = array();
+										
+					$posts = get_posts(array('posts_per_page' => '-1'));
+					
+					foreach ($posts as $single_post)
+					{
+						$author_info = get_coauthors($single_post->ID);
+						foreach ($author_info as $author)
+						{
+							$posts_belonging_to_users[$author->ID][] = $single_post;
+						}
+						
+					}
+					/*echo "<pre>";
+					print_r($posts_belonging_to_users);
+					echo "</pre>";*/
+					
+					foreach($user_manifest as $user)
+					{
+						echo "<li>".$user->first_name." ".$user->last_name."</li>";
+						foreach($posts_belonging_to_users[$user->ID] as $post_of_user)
+						{
+						 	printf("<a href=\"%s\">%s</a>", get_permalink($post_of_user->ID), $post_of_user->post_title);
+						}
+					} 
 				?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
