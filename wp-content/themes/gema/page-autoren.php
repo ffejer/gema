@@ -55,10 +55,23 @@ get_header(); ?>
 					/*echo "<pre>";
 					print_r($posts_belonging_to_users);
 					echo "</pre>";*/
-					
+
+                    $initial_char = "";
+
 					foreach($user_manifest as $user)
 					{
-						echo "<li>".$user->first_name." ".$user->last_name."</li>";
+                        if(count($posts_belonging_to_users[$user->ID]) == 0)
+                        {
+                            continue;
+                        }
+
+                        $curr_initial = substr($user->last_name, 0, 1);
+                        if ($initial_char != $curr_initial) {
+                            $initial_char = $curr_initial;
+                            printf("<h2>%s</h2>", $curr_initial);
+                        }
+
+                        echo "<li>".$user->first_name." ".$user->last_name."</li>";
 						foreach($posts_belonging_to_users[$user->ID] as $post_of_user)
 						{
 						 	printf("<a href=\"%s\">%s</a>", get_permalink($post_of_user->ID), $post_of_user->post_title);

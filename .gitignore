@@ -1,39 +1,8 @@
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-Icon?
-ehthumbs.db
-Thumbs.db
-.buildpath
-.project
-
-# wordpress related files
-/index.php
-/.settings/*
-/.settings
-.htaccess
-wp-*.php
-xmlrpc.php
+# Ignore everything
+/*.*
 wp-admin/
 wp-includes/
-wp-content/uploads/*
-wp-content/uploads
-wp-content/blogs.dir/
-wp-content/upgrade
-wp-content/backup-db/*
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-wp-content/cache/*
-wp-content/cache/supercache/*
-wp-content/w3tc/*
-wp-content/upgrade
-sitemap.xml
-sitemap.xml.gz
-readme.html
-license.txt
-*.log
-db_dump_*.sql
+wp-content/
+
+# But not these files...
+!gema/
