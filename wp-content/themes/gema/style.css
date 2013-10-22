@@ -2842,6 +2842,25 @@ p.comment-form-comment {
 	background-image: url(images/rubriken/studium.png)
 }
 
+ul.authors {
+    margin: 40px 0 40px 0;
+}
+
+ul.authors li {
+    list-style: none;
+}
+
+ul.authors > li > span {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 48px;
+}
+
+ul.authors > li > ul > li > span {
+    font-size: 24px;
+    line-height: 32px;
+}
+
 /*
 	Elastic slider
 */

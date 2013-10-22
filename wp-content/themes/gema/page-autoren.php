@@ -16,8 +16,7 @@ get_header(); ?>
 
 		<div id="primary">
 			<div id="content" role="main">
-				<ul>
-					
+
 				<?php
 				$authors = $wpdb->get_col(
 				    "SELECT um2.user_id
@@ -58,6 +57,7 @@ get_header(); ?>
 
                     $initial_char = "";
 
+                    print("<ul class='authors'>");
 					foreach($user_manifest as $user)
 					{
                         if(count($posts_belonging_to_users[$user->ID]) == 0)
@@ -67,16 +67,21 @@ get_header(); ?>
 
                         $curr_initial = substr($user->last_name, 0, 1);
                         if ($initial_char != $curr_initial) {
+                            if($initial_char != "")
+                                print("</li></ul>");
+
                             $initial_char = $curr_initial;
-                            printf("<h2>%s</h2>", $curr_initial);
+                            printf("<li><span>%s</span><ul>", $curr_initial);
                         }
 
-                        echo "<li>".$user->first_name." ".$user->last_name."</li>";
+                        printf("<li><span>%s %s</span><ul>", $user->first_name, $user->last_name);
 						foreach($posts_belonging_to_users[$user->ID] as $post_of_user)
 						{
-						 	printf("<a href=\"%s\">%s</a>", get_permalink($post_of_user->ID), $post_of_user->post_title);
+						 	printf("<li><a href=\"%s\">%s</a></li>", get_permalink($post_of_user->ID), $post_of_user->post_title);
 						}
-					} 
+                        print("</ul></li>");
+					}
+                    print("</ul></li><ul>");
 				?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
