@@ -65,7 +65,7 @@ get_header(); ?>
                             continue;
                         }
 
-                        $curr_initial = substr($user->last_name, 0, 1);
+                        $curr_initial = mb_substr($user->last_name, 0, 1);
                         if ($initial_char != $curr_initial) {
                             if($initial_char != "")
                                 print("</li></ul>");
