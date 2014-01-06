@@ -1,6 +1,6 @@
 <?php
 
-define(GEMA_CATEGORY_ID_ISSUE, 62);
+define(GEMA_CATEGORY_ID_ISSUE, 59);
 define(GEMA_CATEGORY_ID_SECTION, 24);
 
 function gema_init()

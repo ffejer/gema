@@ -1,8 +1,6 @@
 # Ignore everything
-/*.*
-wp-admin/
-wp-includes/
-wp-content/
+*
 
 # But not these files...
+!/.gitignore
 !gema/

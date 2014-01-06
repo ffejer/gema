@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-		<div id="primary">
+		<section id="primary">
 			<div id="content" role="main" class="custom-page-content">
 
 			<?php $issues = get_categories(array('parent' => GEMA_CATEGORY_ID_ISSUE)); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
 						<span><?php echo($issue->name); ?></span>
 					</div>
 					</a>
-					<?php $count++;Ê?>
+					<?php $count++; ?>
 				<?php endforeach; ?>
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
