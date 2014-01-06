@@ -28,14 +28,17 @@ get_header(); ?>
 				    AND um2.meta_key = 'last_name'
 				    ORDER by um2.meta_value ASC"
 				);
-				
-					//$users = get_users( array('role' => 'author', 'fields' => 'all_with_meta') );
-					
+
 					$user_manifest = array();
-					
+
+                    $authors_to_exclude = unserialize(GEMA_USERS_EXCLUDE);
+
 					foreach ($authors as $author)
 					{
-						$user_manifest[] = get_userdata($author);
+						if(in_array($author, $authors_to_exclude))
+                            continue;
+
+                        $user_manifest[] = get_userdata($author);
 					}
 					
 					$posts_belonging_to_users = array();
@@ -51,9 +54,6 @@ get_header(); ?>
 						}
 						
 					}
-					/*echo "<pre>";
-					print_r($posts_belonging_to_users);
-					echo "</pre>";*/
 
                     $initial_char = "";
 

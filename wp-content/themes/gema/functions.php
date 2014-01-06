@@ -2,6 +2,7 @@
 
 define(GEMA_CATEGORY_ID_ISSUE, 59);
 define(GEMA_CATEGORY_ID_SECTION, 24);
+define(GEMA_USERS_EXCLUDE, serialize(array(1, 84)));
 
 function gema_init()
 {

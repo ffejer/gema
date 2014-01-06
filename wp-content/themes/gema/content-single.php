@@ -20,24 +20,31 @@
 				
 				if($i->count() > 0)
 				{					
-					print $i->count() == 1 ? 'Autor: ' : 'Autoren: ';
 					$author_utility_text = '<a href="%3$s">%1$s %2$s</a>';
-					
-					$i->iterate();
-					
-					printf($author_utility_text,
-						get_the_author_meta( 'first_name' ),
-						get_the_author_meta( 'last_name' ),
-						esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ));
-					
-					while($i->iterate()){
-						print $i->is_last() ? ' und ' : ', ';
-						printf($author_utility_text,
+
+                    $author_links = array();
+
+                    $authors_to_exclude = unserialize(GEMA_USERS_EXCLUDE);
+
+					while($i->iterate()) {
+                        $author_id = get_the_author_meta( 'ID' );
+                        if(in_array($author_id, $authors_to_exclude))
+                            continue;
+
+                        $author_links[] = sprintf($author_utility_text,
 							get_the_author_meta( 'first_name' ),
 							get_the_author_meta( 'last_name' ),
-							esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ));
+							esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) );
 					}
-				}
+
+                    $number_of_authors = count($author_links);
+
+                    if($number_of_authors > 0) {
+                        print $number_of_authors == 1 ? 'Autor: ' : 'Autoren: ';
+                        print implode(', ', $author_links);
+                    }
+
+                }
 			?>
 		</h2>
 		<?php 
