@@ -94,6 +94,10 @@
 					</a>
 				</div>
 			</hgroup>
+        
+            <div id="andrassy-logo"></div>
+            <div id="szte-logo"></div>
+                
 
 			<?php
 				// Has the text been hidden?
