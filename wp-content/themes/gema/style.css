@@ -87,13 +87,30 @@ body {
 	width: 100%;
 }
 #content {
-	margin: 0 10% 0 10.0%;
-	width: 80%;
+    margin: 0 10% 0 3%;
+    width: 70%;
 }
 #secondary {
 	float: right;
 	margin-right: 7.6%;
 	width: 18.8%;
+}
+
+#secondary.main-page-sidebar {
+    font-size: 100%;
+    width: 20%;
+    margin-right: 2%;
+    margin-top: 20px;
+}
+
+#secondary.main-page-sidebar p:first-letter {
+    float: left;
+    color: #CB6B4F;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px; ;
 }
 
 /* Singular */
@@ -2795,18 +2812,21 @@ p.comment-form-comment {
 }
 
 #andrassy-logo {
-    position: absolute;
-    top: 4em;
-    right: 29em;
     background-image: url(images/aub_logo.png);
     width: 200px;
     height: 75px;
+    margin-top: 35px;
+}
+
+.andrassy-advert {
+    width: 200px;
+    margin-top: 35px;
 }
 
 #szte-logo {
     position: absolute;
     top: 4em;
-    right: 21em;
+    right: 38em;
     background: url(images/szte_logo.gif);
     width: 75px;
     height: 75px;

@@ -46,14 +46,15 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?v=6.0" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?v=3.0" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
-<?php if(!isset($GEMA_ENVIRONMENT)):  ?>
-<script type="text/javascript">
+<?php // Google Analytics ?>
+<!-- Google Analytics off for local use DO NOT SUBMIT! -->
+<!-- script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-35392776-1']);
@@ -65,8 +66,7 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
-<?php endif; ?>
+</script -->
 
 <?php
 	/* We add some JavaScript to pages with the comment form
@@ -94,8 +94,6 @@
 					</a>
 				</div>
 			</hgroup>
-            <div id="szte-logo"></div>
-                
 
 			<?php
 				// Has the text been hidden?
