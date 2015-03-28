@@ -17,6 +17,9 @@ if ( 'content' != $current_layout ) :
         </p>
             <div id="andrassy-logo"></div>
             <a href="http://www.grants.at">
+                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/AUB52_small.png" class="andrassy-advert" />
+            </a>
+            <a href="http://www.grants.at">
                 <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/AUB5_small.png" class="andrassy-advert" />
             </a>
         </div>

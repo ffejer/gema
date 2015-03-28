@@ -16,6 +16,9 @@ get_header(); ?>
 
 <div id="primary">
         <div id="aub-ad">
+            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/AUB52_big.png" style="width: 900px;" />
+        </div>
+        <div id="aub-ad">
             <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/AUB5_big.png" style="width: 900px;" />
         </div>
 </div><!-- #primary -->
